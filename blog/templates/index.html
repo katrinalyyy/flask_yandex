@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+
+{% block main_page %}
+
+<div class="wrapper">
+    <div class="empy_block"></div>
+
+
+
+    <div class="info">
+        <div class="description">
+            <p class="names">ФИЗИКА - удобно и понятно</p>
+
+            <div class="desc">
+                <ul class="checkmark">
+                    <li><a href="{{ url_for('main.tickets_page') }}">Билеты</a></li>
+                    <li><a href="{{ url_for('main.formula_page') }}">Формулы</a></li>
+                    <li><a href="{{ url_for('main.guides_page') }}">Проводники в электростатическом поле</a></li>
+                    <li><a href="{{ url_for('main.dielectric_page') }}">Диэлектрики в электростатическом пол</a></li>
+                    <li><a href="{{ url_for('main.capacitor_page') }}">Конденсатор</a></li>
+                    <li><a href="{{ url_for('main.notes_page') }}">Заметки</a></li>
+                </ul>
+            </div>main.
+        </div>
+    </div>
+
+</div>
+{% endblock main_page %}
