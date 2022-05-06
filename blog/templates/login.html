@@ -2,6 +2,9 @@
 
 {% block content %}
 
+        <div class="empty_block"></div>
+        <div class="empty_block"></div>
+
 <div class="login_form">
     <form action="" method="POST">
         {{ form.hidden_tag() }}
@@ -20,7 +23,7 @@
                 {% endif %}
             </div>
 
-            {% if form.password.errors %}
+                {% if form.password.errors %}
                 {{ form.password(class='form-post-title is-invalid', placeholder='Пароль') }}
                 <div class="invalid-feedback">
                     {% for errors in form.password.errors %}
@@ -32,17 +35,24 @@
                 {% endif %}
 
 
-        <div class="form-check">
-                 {{ form.remember(class='form-check-input') }}
-                 {{ form.remember.label(class='form-check-label') }}
-        </div>
+            <div class="form-check">
+                     {{ form.remember(class='form-check-input') }}
+                     {{ form.remember.label(class='form-check-label') }}
+            </div>
 
+        </fieldset>
 
-        <div class="form-group">
+        <div class="form-group_button">
+            <div class="btn"> {{ form.submit(class='btn_log_in') }}</div>
+            <div class="border-top pt-2">
 
-           {{ form.submit(class='btn_log_in') }}
+    <small class="text-muted">
+        Нужен аккаунт? <a class="ml-2" href="{{ url_for('users.register')}}">Зарегистрируйтесь!</a>
+    </small>
+</div>
+            </div>
 
-        </div>
     </form>
 </div>
-{% endblock content %}
+
+{% endblock %}

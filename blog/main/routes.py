@@ -41,14 +41,3 @@ def notes_page():
 @main.route('/tickets_page')  # 8
 def tickets_page():
     return render_template('tickets_page.html')
-
-
-# @main.route('/account')  # 9
-# def account():
-#     return render_template('account.html')
-
-#
-# @main.route('/login')  # 11
-# def login():
-#     return render_template('login.html')
-

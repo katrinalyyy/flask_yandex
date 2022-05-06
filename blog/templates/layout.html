@@ -27,13 +27,13 @@
     </div>
 
     <ul class="main_menu">
-        <li><a href="#"><p>Главная<p></a></li>
-        <li><a href="#"><p>Блог<p></a></li>
+        <li><a href="{{ url_for('main.home') }}"><p>Главная<p></a></li>
+        <li><a href="{{ url_for('main.blog') }}"><p>Блог<p></a></li>
         <li><a href="{{ url_for('users.register') }}"><p>Регистация<p></a></li>
-        <li><a href="#"><p>Логин<p></a></li>
-        <li><a href="#"><p>Аккаунт<p></a></li>
+        <li><a href="{{ url_for('users.login') }}"><p>Вход<p></a></li>
+        <li><a href="{{ url_for('users.account') }}"><p>Аккаунт<p></a></li>
         <li><a href="#"><p>Создать<p></a></li>
-        <li><a href="#"><p>Выход<p></a></li>
+        <li><a href="{{ url_for('users.logout') }}"><p>Выход<p></a></li>
     </ul>
 
 </header>

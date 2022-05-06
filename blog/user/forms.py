@@ -13,7 +13,7 @@ class RegistrationForm(FlaskForm):
     submit = SubmitField('Войти')
 
     def validate_username(self, username):
-        user = User.query.filter_by(username=username.data).first()  # &&&&&&&
+        user = User.query.filter_by(username=username.data).first()
         if user:
             flash('Это имя уже занято. Пожалуйста, выберите другое', 'danger')  # импорт
             raise ValidationError('That username is taken. Please choose a different one')
