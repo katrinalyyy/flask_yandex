@@ -2,4 +2,60 @@
 
 {% block content %}
 
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/table.css') }}">
+
+<div class="table">
+    <table>
+        <tr>
+            <th>ФОРМУЛЫ</th>
+            <th>НАЗВАНИЯ</th>
+        </tr>
+        <tr>
+            <td>X = x0 + V0x * t + (ax * t^2) / 2</td>
+            <td>Закон движения</td>
+        </tr>
+        <tr>
+            <td>p = m / V</td>
+            <td>Плотность вещества</td>
+        </tr>
+        <tr>
+            <td>F = m * a</td>
+            <td>Второй закон Ньютона</td>
+        </tr>
+        <tr>
+            <td>Fтяж = m * g</td>
+            <td>Сила тяжести</td>
+        </tr>
+        <tr>
+            <td>Fупр = -k * delta(x)</td>
+            <td>Сила упругости</td>
+        </tr>
+        <tr>
+            <td>P = m * (g - a)</td>
+            <td>Вес тела</td>
+        </tr>
+        <tr>
+            <td>P = F / S</td>
+            <td>Сила давления</td>
+        </tr>
+        <tr>
+            <td>h1 / h2 = p2 / p1</td>
+            <td>Условие равновесия жидкости</td>
+        </tr>
+        <tr>
+            <td>Pср = A / t</td>
+            <td>Средняя мощность</td>
+        </tr>
+        <tr>
+            <td>Eк = (m * v^2) / 2</td>
+            <td>Кинетическая энергия тела</td>
+        </tr>
+        <tr>
+            <td>Еп = m * g * h</td>
+            <td>Потенциальная энергия тела</td>
+        </tr>
+    </table>
+</div>
+
 {% endblock %}
